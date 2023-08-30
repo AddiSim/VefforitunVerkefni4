@@ -1,0 +1,166 @@
+/*
+Setjum inn „reset“ sem fjarlægir margin og padding af öllu
+Þessu má ekki breyta
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reiknum stærð á öllum boxum sem border-box.
+Þessu má breyta eða fjarlægja.
+*/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* og látum erfast á allt */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: 'mittfont';
+  src: url(/fonts/Inter/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: 'mittfont1';
+  src: url(/fonts/Inter/Inter-ExtraBold.ttf);
+}
+
+
+/* hjálpar class sem felur sjónrænt en skjálesarar lesa */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
+/* Uppsetning á síðu—layout */
+.content {
+  /* Lætur börn .content raða sér með _flexbox_ */
+  display: flex;
+  /* röðun sé í dálkaröð (niður) */
+  flex-direction: column;
+}
+
+.content img{
+  float: left;
+}
+
+.content button{
+  background-color: #afebff;
+}
+
+.wrapper {
+  padding-left: 200px;
+  max-width: 1200px;
+  width: 100%;
+  font-family: 'mittfont';
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.container{
+  padding-left: 230px;
+  max-width: 1200px;
+  font-family: 'mittfont';
+  line-height:40px;
+  margin-bottom: 20px;
+}
+
+
+.content > header {
+  font-family: 'mittfont1';
+  background-color: #00bfff;
+  height: 60px;
+}
+
+.content > nav {
+  font-family: 'mittfont1';
+  
+}
+
+.content > main {
+  /* Lætur <main> taka allt auka pláss sem er í boði */
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #afebff;
+}
+
+.content > footer {
+  background-color: #00bfff;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 30px;
+  padding-left :230px;
+  font-family: 'mittfont';
+}
+
+/* almennar skilgreiningar */
+
+h1, h2 {
+  /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
+  font-family: 'mittfont1';
+  padding-left :230px;
+}
+
+a {
+  text-decoration: none;
+  color:black;
+}
+
+/* nav — valmynd */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  /* TODO */
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* TODO */
+
+
+/* main — meginmál */
+
+/* TODO */
+
+/* töflur */
+
+table {
+  border-spacing: 0;
+}
+
+/* TODO */
+
+/* form */
+
+/* TODO */
