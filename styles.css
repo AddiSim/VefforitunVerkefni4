@@ -58,24 +58,6 @@ html {
   background-color: #afebff;
 }
 
-.wrapper {
-  padding-left: 200px;
-  max-width: 1200px;
-  width: 100%;
-  font-family: 'mittfont';
-  line-height: 2;
-  margin-bottom: 20px;
-}
-
-.container{
-  padding-left: 230px;
-  max-width: 1200px;
-  font-family: 'mittfont';
-  line-height:40px;
-  margin-bottom: 20px;
-}
-
-
 header {
   font-family: 'mittfont1';
   background-color: #2f0505;
@@ -83,17 +65,43 @@ header {
   text-align: center;
   color: #ffe7ae;
   width: 100vw;
+  border-bottom: 8px solid #ffe7ae;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
-.content > nav {
-  font-family: 'mittfont1';
-  
+/* Styling for the navigation container */
+.nav-container {
+  background-color: #fff9ee;
+  padding: 10px;  /* Adjust this to control the padding around the navigation menu */
 }
+
+/* Styling for the navigation menu */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* Styling for each menu item */
+nav ul li {
+  font-family: mittfont1;
+  margin: 0 15px;  /* Adjust this to control the spacing between menu items */
+}
+
+/* Styling for the menu links */
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .content > main {
   /* Lætur <main> taka allt auka pláss sem er í boði */
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
+  position: static;
 }
 
 table {
@@ -111,15 +119,19 @@ tr:nth-child(even) {
   background-color: #afebff;
 }
 
-.content > footer {
+footer {
   background-color: #2f0505;
   position:absolute;
-  bottom:0;
-  left:0;
   width: 100%;
-  height: 30px;
   font-family: 'mittfont';
   color: #ffe7ae;
+  content: center;
+  display: flex;
+  flex-wrap: wrap; /* Ef ekki er nóg pláss, fer næsta box á næsta línu */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; 
 }
 
 /* almennar skilgreiningar */
@@ -127,7 +139,6 @@ tr:nth-child(even) {
 h1, h2 {
   /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
   font-family: 'mittfont1';
-  padding-left :230px;
 }
 
 a {
@@ -137,34 +148,33 @@ a {
 
 /* nav — valmynd */
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 nav ul li {
   /* TODO */
   display: inline-block;
   margin-left: 30px;
 }
 
-.info {
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hererumvid {
   list-style: none;
-    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 0 3rem 0;
-    background-color: #2f0505;
+    margin-right: 20px;
 }
 
 .opnun {
   list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-    background-color: #2f0505;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.hererumvid:last-child {
+  margin-right: 0;
 }
 
 /* TODO */
