@@ -13,13 +13,14 @@ Reiknum stærð á öllum boxum sem border-box.
 */
 html {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
-/* og látum erfast á allt */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
+
 @font-face {
   font-family: 'mittfont';
   src: url(/fonts/Lord-Regular.ttf);
@@ -96,8 +97,7 @@ nav ul li a {
 }
 
 
-.content > main {
-  /* Lætur <main> taka allt auka pláss sem er í boði */
+.content > main{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
@@ -119,6 +119,13 @@ tr:nth-child(even) {
   background-color: #afebff;
 }
 
+.date-list > p, .opnun > p{
+  font-family: mittfont1;
+}
+
+.date-list > li{
+ font-family: mittfont;
+}
 footer {
   background-color: #2f0505;
   position:absolute;
@@ -132,6 +139,10 @@ footer {
   justify-content: center;
   align-items: center;
   overflow: auto; 
+  position: absolute;
+  bottom: 0;
+  border-top: 8px solid #ffe7ae;
+  line-height: 1;
 }
 
 /* almennar skilgreiningar */
@@ -154,20 +165,24 @@ nav ul li {
   margin-left: 30px;
 }
 
+.vinsaelir {
+  width:100%
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
 }
 
-.hererumvid {
+.hererumvid > ul{
   list-style: none;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
 }
 
-.opnun {
-  list-style: none;
+.opnun > ul{
+  list-style-type: none;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
