@@ -1,35 +1,18 @@
-/*
-Setjum inn „reset“ sem fjarlægir margin og padding af öllu
-Þessu má ekki breyta
-*/
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
 * {
   margin: 0;
   padding: 0;
 }
 
-/*
-Reiknum stærð á öllum boxum sem border-box.
-Þessu má breyta eða fjarlægja.
-*/
+/* Reiknum stærð á öllum boxum sem border-box */
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
-
-*,
-*:before,
-*:after {
+/* og látum erfast á allt */
+*, *:before, *:after {
   box-sizing: inherit;
 }
-
-@font-face {
-  font-family: 'mittfont';
-  src: url(/fonts/Lord-Regular.ttf);
-}
-@font-face {
-  font-family: 'mittfont1';
-  src: url(/fonts/Lora-Bold.ttf);
-}
-
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
 .sr-only:not(:focus):not(:active) {
@@ -42,42 +25,30 @@ html {
   width: 1px;
 }
 
-
-/* Uppsetning á síðu—layout */
-.efni {
-  /* Lætur börn .content raða sér með _flexbox_ */
-  display: flex;
-  /* röðun sé í dálkaröð (niður) */
-  flex-direction: column;
+@font-face {
+  font-family: 'mittfont';
+  src: url(/fonts/Lord-Regular.ttf);
+}
+@font-face {
+  font-family: 'mittfont1';
+  src: url(/fonts/Lora-Bold.ttf);
 }
 
-.efni img{
-  float: left;
-}
-
-.efni button{
-  background-color: #afebff;
-}
 
 header {
   font-family: 'mittfont1';
+  width: 100%;
   background-color: #2f0505;
-  height: 60px;
-  text-align: center;
   color: #ffe7ae;
-  width: 100vw;
+  text-align: center;
   border-bottom: 8px solid #ffe7ae;
-  line-height: 1;
-  box-sizing: border-box;
 }
 
-/* Styling for the navigation container */
 .nav-container {
   background-color: #fff9ee;
-  padding: 10px;  /* Adjust this to control the padding around the navigation menu */
+  padding: 10px; 
 }
 
-/* Styling for the navigation menu */
 nav ul {
   display: flex;
   justify-content: center;
@@ -96,29 +67,6 @@ nav ul li a {
   color: inherit;
 }
 
-
-.content > main{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 20px;
-  position: static;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #afebff;
-}
-
 .date-list > p, .opnun > p{
   font-family: mittfont1;
 }
@@ -126,24 +74,157 @@ tr:nth-child(even) {
 .date-list > li{
  font-family: mittfont;
 }
+
+.main {
+  min-height: 300px;
+  max-width: 900px;
+  margin-left: 300px;
+}
+
+.main-container{
+  border-bottom: 4px solid #ffe7ae;
+}
+
+.main-container .opnunartimi,
+.main-container .um,
+.main-container .matsedill,
+.main-container .panta {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.main-container .opnunartimi ul {
+  list-style-type: none;
+}
+
+.main-container .opnunartimi {
+  float: left;
+  clear: left;
+}
+
+.main-container .um {
+  float: right;
+  clear: right;
+}
+
+.main-container .matsedill {
+  float: left;
+  clear: left;
+}
+
+.main-container .panta {
+  float: right;
+  clear: right;
+  margin-right: 180px;
+}
+
+.main-container a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main-container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+  
+.main .vinsaelir-rettir{
+  margin-top: 20px;
+  line-height: 45px;
+}
+
+.main .vinsaelir-rettir a{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.vinsaelir-rettir {
+  border-bottom: 4px solid #ffe7ae;
+}
+
+.vinsaelir-rettir .lasagna,
+.vinsaelir-rettir .pizza,
+.vinsaelir-rettir .hamborgari,
+.vinsaelir-rettir .quesadilla {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.vinsaelir-rettir .lasagna{
+  float: left;
+  clear: left;
+}
+
+.vinsaelir-rettir .pizza{
+  float: right;
+  clear: right;
+}
+
+.vinsaelir-rettir .hamborgari{
+  float: left;
+  clear: left;
+}
+
+.vinsaelir-rettir .quesadilla{
+  float: right;
+  clear: right;
+}
+
+.vinsaelir-rettir::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.skoda{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.skoda a{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   background-color: #2f0505;
-  position:absolute;
-  width: 100%;
-  font-family: 'mittfont';
   color: #ffe7ae;
-  content: center;
-  display: flex;
-  flex-wrap: wrap; /* Ef ekki er nóg pláss, fer næsta box á næsta línu */
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  overflow: auto; 
-  position: absolute;
-  bottom: 0;
+  text-align: center;
+  content:center;
   border-top: 8px solid #ffe7ae;
-  line-height: 1;
 }
+
+.footer-content {
+  text-align: center; /* Centers inline and inline-block children */
+}
+
+.footer-content .opnun,
+.footer-content .hererumvid {
+  display: inline-block; /* Puts them side by side */
+  vertical-align: top; /* Aligns them to the top */
+  margin: 0 20px; /* Adds some horizontal spacing between them */
+  box-sizing: border-box;
+  width: calc(50% - 40px); /* Take into account the margin */
+}
+
+/* Additional styling to remove list bullets and add some space between list items */
+.footer-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content ul li,
+.footer-content ul p {
+  margin-bottom: 10px;
+}
+
 
 /* almennar skilgreiningar */
 
@@ -151,6 +232,7 @@ h1, h2 {
   /* TODO setja almennar skilgreinar fyrir fyrirsagnir */
   font-family: 'mittfont1';
 }
+
 
 a {
   text-decoration: none;
@@ -165,12 +247,8 @@ nav ul li {
   margin-left: 30px;
 }
 
-.vinsaelir {
-  width:100%
-}
-
 .footer-content {
-  display: flex;
+  display: center;
   justify-content: space-between;
 }
 
@@ -192,21 +270,7 @@ nav ul li {
   margin-right: 0;
 }
 
-/* TODO */
-
-
-/* main — meginmál */
-
-/* TODO */
-
-/* töflur */
-
 table {
   border-spacing: 0;
 }
 
-/* TODO */
-
-/* form */
-
-/* TODO */
