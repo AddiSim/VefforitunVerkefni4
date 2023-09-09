@@ -13,88 +13,117 @@
       <div class="content">
         <header>
             <h1>Pantanir</h1>
+            <p>Pantaðu borð og mættu til okkar eða pantaðu mat sem við sendum þér eða þú sækir.</p>
         </header>
 
         <p class="sr-only"><a href="#efni">Beint í efni</a></p>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html">Forsíða</a></li>
-                <li><a href="um.html">Um okkur</a></li>
-                <li><a href="matsedill.html">Matseðill</a></li>
-                <li><strong>Pantanir</strong></li>
-            </ul>
-        </nav>
-
-        <main id="#efni">
-            <a>Pantaðu borð og mættu til okkar eða pantaðu mat sem við sendum þér eða þú sækir</a>
-
-            <h2>Panta Borð</h2>
-
-            <label>Hveænær viltu koma? <input type="date" value="2023-08-27" min="2023-08-27" max="2024-08-27" ></label>
-
-            <p>Hve mörg</p>
-            <label>0<input type="range" min="0" max="10">10</label>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Forsíða</a></li>
+                    <li><a href="um.html">Um Veitingastaðin</a></li>
+                    <li><a href="matsedill.html">Matseðill</a></li>
+                    <li><strong>Pöntunarsíða</strong></li>
+                </ul>
+            </nav>
+        </div>
+        <main id="#efni" class="main clearfix">
             
-            
-            <p>Viltu taka eitthvað fram?</p>
-            <label><input type="text" placeholder="Texti"></label>
-            
-            
-            <h2>Panta mat</h2>
+            <div class="bord">
+                <h2>Panta Borð</h2>
 
-            <fieldset>
-                <legend>Veldu uppí 5 rétti</legend>
+                <label>Hveænær viltu koma? <input type="date" value="2023-08-27" min="2023-08-27" max="2024-08-27" ></label>
+
+                <p>Hve mörg</p>
+                <select name="num_people">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                
+                
+                <p>Viltu taka eitthvað fram?</p>
+                <label><input type="text" placeholder="Texti"></label>
+            </div>
+            <div class="fjoldi">
+                
+                    <h2>Panta mat</h2>
+                    <div>
+                        <p>Réttur #1</p>
+                        <label><input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Réttur #2</p>
+                        <label><input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Réttur #3</p>
+                        <label><input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Réttur #4</p>
+                        <label><input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Réttur #5</p>
+                        <label><input type="text"></label>
+                    </div>
+                    <div>
+                        <p>Heimilisfang</p>
+                        <label><input type="text"></label>
+                    </div>
+                
+            </div>
+            <div class="upplysingar">
+                <h2>Þínar upplýsingar</h2>
                 <div>
-                    <label><input type="checkbox">Hamborgarar</label>
+                  <label>Nafn <input type="text" required></label>
                 </div>
                 <div>
-                    <label><input type="checkbox">Pizza</label>
+                  <label>Email <input type="email" value="nafn@example.org" required></label>
                 </div>
                 <div>
-                    <label><input type="checkbox">Lasagna</label>
+                  <label>Sími <input type="tel" value="999-9999" required></label>
+                </div>
+            </div>  
+            <div class="skilmalar">
+                <h2>Samþykkja og panta</h2>
+                <div>
+                  <label><input type="checkbox">Ég samþykki skilmála Veitingastaðsins</label>
                 </div>
                 <div>
-                    <label><input type="checkbox">Risotto</label>
+                  <label><input type="button" value="Panta"></label>
                 </div>
-                <div>
-                    <label><input type="checkbox">Quesadilla</label>
-                </div>
-            </fieldset>
-
-            <label>Sláðu inn heimilisfang:<input type="text"></label>
-
-            <h2>Þínar upplýsingar</h2>
-            <label>Nafn <input type="text" required></label>
-
-            <label>Email <input type="email" value="username@domain" required></label>
-
-            <label>Sími <input type="tel" value="999-9999" required></label>
-
-            <h2>Samþykkja og panta</h2>
-
-            <label><input type="checkbox">Ég samþykki skilmála Veitingastaðsins</label>
-            <label><input type="button" value="Panta"></label>
+            </div>
+            <p><span class="underline"><a href="/index.html">Aftur á forsíðu</a></span></p>
         </main>
 
         <footer>
-            <p><a href="../index.html">Til baka á forsíðu</a></p>
-            <h3>Opnunartími</h3>
-            <ul>
-                <li>Mánudaga til fimmtudaga 09:00–18:00</li>
-                <li>Föstudaga 10:00–22:00</li>
-                <li>Laugardaga 11:00–22:00</li>
-                <li>Sunnudaga Lokað</li>
-            </ul>
-            <h4>Hér erum við</h4>
-            <ul>
-                <li>Veitingastaðurinn ehf.</li>
-                <li>Aðalgata 10</li>
-                <li>100 Reykjavík</li>
-                <li>Sími 333-4567</li>
-                <li>veitingastadur@example.org</li>
-            </ul>
-        </footer>
+            <div class="footer-content">
+              <div class="opnun">
+                <h2>Opnunartími</h2>
+                <p>Mánudaga til fimmtudaga: 09:00–18:00</p>
+                <p>Föstudaga: 10:00–22:00</p>
+                <p>Laugardaga: 11:00–22:00</p>
+                <p>Sunnudaga: Lokað</p>
+              </div>
+              <div class="hererumvid">
+                <h2>Hér erum við</h2>
+                <p>Veitingastaðurinn ehf.</p>
+                <p>Aðalgata 10</p>
+                <p>100 Reykjavík</p>
+                <p>Sími <span class="underline">333-4567</span></p>
+                <p><span class="underline">veitingastadur@example.org</span></p>
+              </div>        
+            </div>
+          </footer>
       </div>
     </body>
 

@@ -17,63 +17,66 @@
       <div class="content">
         <header>
             <h1>Um veitingarstaðin</h1>
+            <p>Við erum búin að elda mat fyrir fólk síðan 2001.</p>
         </header>
 
         <p class="sr-only"><a href="#efni">Beint í efni</a></p>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html">Forsíða</a></li>
-                <li><strong>Um veitingarstaðin</strong></li>
-                <li><a href="./matsedill.html">Matseðill</a></li>
-                <li><a href="./pontun.html">Pöntun</a></li>
-            </ul>
-        </nav>
-
-        <main id="efni">
-
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Forsíða</a></li>
+                    <li><strong>Um Veitingastaðin</strong></li>
+                    <li><a href="./matsedill.html">Matseðill</a></li>
+                    <li><a href="./pontun.html">Pöntunarsíða</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main id="efni" class="um-main clearfix">
             <h2>Sagan</h2>
-            <p>Við byrjuðum að elda árið 2001 og nam fringilla tellus a nisl scelerisque, ut varius nibh blandit. Donec dignissim vehicula justo in aliquet. In rhoncus congue ipsum ut volutpat. Morbi vehicula leo vitae odio viverra, malesuada euismod libero porttitor. Donec metus purus, luctus nec tortor sed, accumsan fermentum libero. Morbi vel lacus vel nisi molestie sollicitudin eget sed massa. Curabitur id faucibus nunc, ut blandit justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac purus ac elit vehicula pulvinar. Sed vel nunc nulla.</p>
-
-            <h3>Starfsfólk</h3>
-            <h4>Anna Jónsdóttir</h4>
-            <img width="200" src="/myndir/anna.jpg" alt="Anna">
-            <p>Eigandi</p>
-
-            <h4>Adam Adamsson</h4>
-            <img width="200" src="/myndir/adam.jpg" alt="Adam">
-            <p>Rekstarstjóri</p>
-
-            <h4>Benni</h4>
-            <img width="200" src="/myndir/benni.jpg" alt="Benni">
-            <p>Kokkur</p>
-
-            <h4>Birna</h4>
-            <img width="200" src="/myndir/birna.jpg" alt="Birna">
-            <p>Kokkur</p>
-
-            
-            
+            <p class="texti">Við byrjuðum að elda árið 2001 og nam fringilla tellus a nisl scelerisque, ut varius nibh blandit. Donec dignissim vehicula justo in aliquet. In rhoncus congue ipsum ut volutpat. Morbi vehicula leo vitae odio viverra, malesuada euismod libero porttitor. Donec metus purus, luctus nec tortor sed, accumsan fermentum libero. Morbi vel lacus vel nisi molestie sollicitudin eget sed massa. Curabitur id faucibus nunc, ut blandit justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac purus ac elit vehicula pulvinar. Sed vel nunc nulla.</p>
+            <div class="manneskja">
+              <h3>Starfsfólk</h3>
+              <h4>Anna Jónsdóttir</h4>
+              <img width="400" src="/myndir/anna.jpg" alt="Anna">
+              <p>Eigandi</p>
+            </div>
+            <div class="manneskja">
+              <h4>Adam Adamsson</h4>
+              <img width="500" src="/myndir/adam.jpg" alt="Adam">
+              <p>Rekstarstjóri</p>
+            </div>
+            <div class="manneskja">
+              <h4>Benni</h4>
+              <img width="400" src="/myndir/benni.jpg" alt="Benni">
+              <p>Kokkur</p>
+            </div>
+            <div class="manneskja">
+              <h4>Birna</h4>
+              <img width="500" src="/myndir/birna.jpg" alt="Birna">
+              <p>Kokkur</p>
+            </div>  
+            <p><span class="underline"><a href="/index.html">Aftur á forsíðu</a></span></p> 
         </main>
 
         <footer>
-            <p><a href="../index.html">Til baka á forsíðu</a></p>
-            <h3>Opnunartími</h3>
-            <ul>
-                <li>Mánudaga til fimmtudaga 09:00–18:00</li>
-                <li>Föstudaga 10:00–22:00</li>
-                <li>Laugardaga 11:00–22:00</li>
-                <li>Sunnudaga Lokað</li>
-            </ul>
-            <h4>Hér erum við</h4>
-            <ul>
-                <li>Veitingastaðurinn ehf.</li>
-                <li>Aðalgata 10</li>
-                <li>100 Reykjavík</li>
-                <li>Sími 333-4567</li>
-                <li>veitingastadur@example.org</li>
-            </ul>
-        </footer>
+            <div class="footer-content">
+              <div class="opnun">
+                <h2>Opnunartími</h2>
+                <p>Mánudaga til fimmtudaga: 09:00–18:00</p>
+                <p>Föstudaga: 10:00–22:00</p>
+                <p>Laugardaga: 11:00–22:00</p>
+                <p>Sunnudaga: Lokað</p>
+              </div>
+              <div class="hererumvid">
+                <h2>Hér erum við</h2>
+                <p>Veitingastaðurinn ehf.</p>
+                <p>Aðalgata 10</p>
+                <p>100 Reykjavík</p>
+                <p>Sími <span class="underline">333-4567</span></p>
+                <p><span class="underline">veitingastadur@example.org</span></p>
+              </div>        
+            </div>
+          </footer>
       </div>
     </body>
 
