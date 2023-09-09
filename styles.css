@@ -234,7 +234,6 @@ footer {
   background-color: #2f0505;
   color: #ffe7ae;
   text-align: center;
-  content:center;
   border-top: 8px solid #ffe7ae;
 }
 
@@ -285,7 +284,6 @@ nav ul li {
 }
 
 .footer-content {
-  display: center;
   justify-content: space-between;
 }
 
@@ -389,13 +387,6 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-.forsida {
-  border-top: 1px solid #000; 
-  padding-top: 10px; 
-  text-align: center; 
-}
-
 
 .clearfix::after {
   content: "";
