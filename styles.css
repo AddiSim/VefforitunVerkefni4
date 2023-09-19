@@ -2,395 +2,231 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-/* Reiknum stærð á öllum boxum sem border-box */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-/* og látum erfast á allt */
-*, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box; /* Move box-sizing to the universal selector */
 }
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 
-@font-face {
-  font-family: 'mittfont';
-  src: url(/fonts/Lord-Regular.ttf);
-}
-@font-face {
-  font-family: 'mittfont1';
-  src: url(/fonts/Lora-Bold.ttf);
+/*** Almennt ***/
+
+html,
+input,
+select,
+button {
+  font-size: 16px;
+  font-family: 'Lora', serif;
+  color: inherit; /* Add color property */
 }
 
+a {
+  color: inherit;
+  text-decoration: none; /* Remove default underlines */
+}
 
-header {
-  font-family: 'mittfont1';
-  width: 100%;
-  background-color: #2f0505;
-  color: #ffe7ae;
-  text-align: center;
+h2,
+h3,
+section {
+  margin-bottom: 1rem;
+  color: inherit; /* Add color property */
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio for images */
+}
+
+/*** Haus ***/
+
+body > header {
+  padding: 1rem;
   border-bottom: 8px solid #ffe7ae;
-  line-height: 45px;
+
+  background-color: #2f0505;
+  color: #fff1cf;
+
+  text-align: center;
 }
 
-.nav-container {
+/*** Valmynd ***/
+
+nav {
+  margin-bottom: 1rem;
+  padding: 1rem;
+
   background-color: #fff9ee;
-  padding: 10px; 
+  color: #2f0505;
+  display: flex; /* Add display property */
+  justify-content: center; /* Center align menu items horizontally */
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
+  list-style: none;
+  display: flex; /* Add display property */
+  gap: 1rem; /* Add gap property for spacing between items */
 }
-
 
 nav ul li {
-  font-family: mittfont1;
-  margin: 0 15px;  
+  margin-right: 1rem;
 }
 
+/*** Meginmál ***/
 
-nav ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.date-list > p, .opnun > p{
-  font-family: mittfont1;
-}
-
-.date-list > li{
- font-family: mittfont;
-}
-
-.main {
-  min-height: 300px;
+main {
+  margin: 0 auto;
+  padding: 1rem;
   max-width: 900px;
-  margin-left: 300px;
-  line-height: 45px;
+  display: flex; /* Add display property */
+  flex-wrap: wrap; /* Wrap boxes when the screen is narrow */
+  gap: 2rem; /* Add gap property for spacing between boxes */
 }
 
-.main .texti {
-  line-height: normal;
-}
-
-.main-container{
-  border-bottom: 4px solid #ffe7ae;
-}
-
-.main-container .opnunartimi,
-.main-container .um,
-.main-container .matsedill,
-.main-container .panta {
-  box-sizing: border-box;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 35px;
-}
-
-.main-container .opnunartimi ul {
-  list-style-type: none;
-}
-
-.main-container .opnunartimi {
-  float: left;
-  clear: left;
-}
-
-.main-container .um {
-  float: right;
-  clear: right;
-}
-
-.main-container .matsedill {
-  float: left;
-  clear: left;
-}
-
-.main-container .panta {
-  float: right;
-  clear: right;
-}
-
-.main-container a {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.main-container::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-  
-.main .vinsaelir-rettir{
-  margin-top: 20px;
-  line-height: 45px;
-}
-
-.main .vinsaelir-rettir a{
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.vinsaelir-rettir {
-  border-bottom: 4px solid #ffe7ae;
-}
-
-.vinsaelir-rettir .lasagna,
-.vinsaelir-rettir .pizza,
-.vinsaelir-rettir .hamborgari,
-.vinsaelir-rettir .quesadilla {
-  box-sizing: border-box;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 35px;
-}
-
-.vinsaelir-rettir .lasagna{
-  float: left;
-  clear: left;
-}
-
-.vinsaelir-rettir .pizza{
-  float: right;
-  clear: right;
-  margin-right: 55px;
-}
-
-.vinsaelir-rettir .hamborgari{
-  float: left;
-  clear: left;
-}
-
-.vinsaelir-rettir .quesadilla{
-  float: right;
-  clear: right;
-  margin-right: 55px;
-}
-
-.vinsaelir-rettir::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.skoda{
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.skoda a{
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.um-main {
-  min-height: 300px;
-  max-width: 900px;
-  margin-left: 300px;
-  line-height: 45px;
-}
-
-.um-main .texti {
-  line-height: normal;
-}
-
-.manneskja {
-  width: 50%; 
-  float: left; 
-  box-sizing: border-box;
-}
-
-.manneskja h4,
-.manneskja img,
-.manneskja p {
-  box-sizing: border-box;
-  display: block;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
+/*** Fótur ***/
 
 footer {
-  background-color: #2f0505;
-  color: #ffe7ae;
-  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
   border-top: 8px solid #ffe7ae;
+
+  background-color: #2f0505;
+  color: #fff1cf;
+
+  text-align: center;
 }
 
-.footer-content {
-  text-align: center; 
-  margin-top: 1em;
+footer > section {
+  display: flex; /* Add display property */
+  flex-direction: column; /* Stack sections vertically on narrow screens */
+  align-items: center; /* Center align content horizontally */
 }
 
-.footer-content .opnun,
-.footer-content .hererumvid {
-  display: inline-block; 
-  vertical-align: top; 
-  box-sizing: border-box;
-}
-
-
-.footer-content ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-content ul li,
-.footer-content ul p {
-  margin-bottom: 10px;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-
-h1, h2, h3 {
-  font-family: 'mittfont1';
-}
-
-
-a {
-  text-decoration: none;
-  color:black;
-}
-
-
-
-nav ul li {
-  display: inline-block;
-  margin-left: 30px;
-}
-
-.footer-content {
-  justify-content: space-between;
-}
-
-.hererumvid > ul{
+footer ul {
   list-style: none;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
 }
 
-.opnun > ul{
-  list-style-type: none;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
+/*** Box! ***/
+
+.boxes {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #ffe7ae;
+  display: flex; /* Add display property */
+  flex-wrap: wrap; /* Wrap boxes when the screen is narrow */
+  gap: 2rem; /* Add gap property for spacing between boxes */
 }
 
-.hererumvid:last-child {
-  margin-right: 0;
+.boxes .box {
+  margin-bottom: 1rem;
+  width: calc(50% - 1rem); /* Use calc to account for margins */
+  display: flex; /* Add display property */
+  flex-direction: column; /* Stack content vertically */
 }
 
+.boxes .box a {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/*** Opnunartími ***/
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+/*** Matseðill ***/
 
 table {
-  width: 100%;
-  border-collapse: collapse;  
+  margin-bottom: 1rem;
+  border-collapse: collapse; /* Collapse borders between table cells */
+  width: 100%; /* Make the table full width */
 }
 
-
-th, td {
-  text-align: left;
-  padding: 8px;  
-  border-bottom: 1px solid #ddd;  
+table th,
+table td {
+  padding: 0.5rem;
+  border: 1px solid #fff9ee; /* Add borders to table cells */
 }
 
-
-tbody tr:nth-child(odd) {
+table tbody tr:nth-child(2n + 1) {
   background-color: #ffe7ae;
 }
 
-.bord, .fjoldi, .upplysingar, .skilmalar {
-  float: left;
-  width: calc(50% - 20px); 
-  margin: 10px;
+/*** Pöntunarform ***/
+
+fieldset {
+  margin-bottom: 1rem;
   border: 1px solid #ffe7ae;
-  padding-left: 20px;
-  box-sizing: border-box;
-  display: block; 
-  padding-bottom: 20px;
+  padding: 1rem;
+  display: flex; /* Add display property */
+  flex-direction: column; /* Stack form elements vertically */
 }
 
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="range"],
-input[type="checkbox"] {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+fieldset legend {
+  font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+fieldset div {
+  margin-bottom: 1rem;
 }
 
-
-input[type="date"] {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
+fieldset div label {
+  display: block;
 }
 
-
-input[type="checkbox"] {
-  margin-right: 10px;
+fieldset input,
+fieldset select,
+fieldset textarea {
+  padding: 0.5rem;
+  width: 100%; /* Make form elements full width */
 }
 
-
-input[type="button"] {
-  color: black;
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  text-decoration: none;
+fieldset input[type='checkbox'] {
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
+  margin-right: 0.5rem;
 }
 
-select {
-  height: 40px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+form button {
+  padding: 0.25rem;
+  border-radius: 6px;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+/* Additional styles to meet the new requirements */
+body {
+  background-color: #fff; /* Set a background color for the body */
 }
 
+nav ul li:first-child {
+  font-weight: bold; /* Make the first menu item bold */
+}
+
+.popular {
+  background-color: #fff; /* Add a background color to the popular section */
+}
+
+.popular h2 {
+  margin-top: 2rem; /* Add margin-top to the popular section heading */
+}
+
+.popular .boxes {
+  flex-direction: row; /* Display boxes horizontally in the popular section */
+}
+
+.popular .box {
+  width: calc(25% - 1rem); /* Adjust box width for the popular section */
+}
+
+.popular .box p {
+  margin-top: 0.5rem; /* Add spacing between paragraphs */
+}
