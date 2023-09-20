@@ -226,8 +226,8 @@ form button {
 }
 
 .boxes img {
-  height: 500px; /* Set a fixed height for the images */
-  width: auto; /* Allow the width to adjust based on the aspect ratio */
+  height: 500px; 
+  width: auto; 
   object-fit: cover;
 }
 
