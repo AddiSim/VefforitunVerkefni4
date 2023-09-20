@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Move box-sizing to the universal selector */
+  box-sizing: border-box;
 }
 
 /* hjálpar class sem felur sjónrænt en skjálesarar lesa */
@@ -16,32 +16,35 @@
   width: 1px;
 }
 
-/*** Almennt ***/
-
-html,
-input,
-select,
-button {
+html, body, input, select, button, p, label, textarea, ul, li, dl, dd, table, th, td {
+  font-family: 'NotoSansDisplay', sans-serif;
   font-size: 16px;
+  color: inherit;
+}
+
+header, nav {
   font-family: 'Lora', serif;
-  color: inherit; /* Add color property */
 }
 
 a {
   color: inherit;
-  text-decoration: none; /* Remove default underlines */
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline; 
 }
 
 h2,
 h3,
 section {
   margin-bottom: 1rem;
-  color: inherit; /* Add color property */
+  color: inherit;
 }
 
 img {
   max-width: 100%;
-  height: auto; /* Maintain aspect ratio for images */
+  height: auto;
 }
 
 /*** Haus ***/
@@ -61,17 +64,16 @@ body > header {
 nav {
   margin-bottom: 1rem;
   padding: 1rem;
-
   background-color: #fff9ee;
   color: #2f0505;
-  display: flex; /* Add display property */
-  justify-content: center; /* Center align menu items horizontally */
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   list-style: none;
-  display: flex; /* Add display property */
-  gap: 1rem; /* Add gap property for spacing between items */
+  display: flex;
+  gap: 1rem;
 }
 
 nav ul li {
@@ -84,9 +86,9 @@ main {
   margin: 0 auto;
   padding: 1rem;
   max-width: 900px;
-  display: flex; /* Add display property */
-  flex-wrap: wrap; /* Wrap boxes when the screen is narrow */
-  gap: 2rem; /* Add gap property for spacing between boxes */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 /*** Fótur ***/
@@ -95,17 +97,17 @@ footer {
   margin-top: 1rem;
   padding: 1rem;
   border-top: 8px solid #ffe7ae;
-
   background-color: #2f0505;
   color: #fff1cf;
-
   text-align: center;
+  display: flex;
+  justify-content: space-around; 
+  align-items: flex-start; 
 }
 
-footer > section {
-  display: flex; /* Add display property */
-  flex-direction: column; /* Stack sections vertically on narrow screens */
-  align-items: center; /* Center align content horizontally */
+.footer-section {
+  flex: 1; 
+  padding: 1rem;
 }
 
 footer ul {
@@ -117,22 +119,43 @@ footer ul {
 .boxes {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #ffe7ae;
-  display: flex; /* Add display property */
-  flex-wrap: wrap; /* Wrap boxes when the screen is narrow */
-  gap: 2rem; /* Add gap property for spacing between boxes */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
+
 
 .boxes .box {
-  margin-bottom: 1rem;
-  width: calc(50% - 1rem); /* Use calc to account for margins */
-  display: flex; /* Add display property */
-  flex-direction: column; /* Stack content vertically */
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  background-color: #ffe7ae;
+  border-radius: 10px; 
+  position: relative;
 }
 
+
+.boxes .box h3 {
+  text-decoration: none; 
+  border-bottom: 2px solid #2f0505; 
+  margin-bottom: 1rem; 
+}
+
+
+.boxes .box p {
+  margin-bottom: 0.5rem; 
+}
+
+
 .boxes .box a {
-  margin-top: 1rem;
+  margin-top: auto; 
   font-weight: bold;
+}
+
+.pantanir-boxes .box {
+  border: 2px solid black;
 }
 
 /*** Opnunartími ***/
@@ -149,14 +172,14 @@ dd {
 
 table {
   margin-bottom: 1rem;
-  border-collapse: collapse; /* Collapse borders between table cells */
-  width: 100%; /* Make the table full width */
+  border-collapse: collapse;
+  width: 100%;
 }
 
 table th,
 table td {
   padding: 0.5rem;
-  border: 1px solid #fff9ee; /* Add borders to table cells */
+  border: 1px solid #fff9ee;
 }
 
 table tbody tr:nth-child(2n + 1) {
@@ -169,8 +192,8 @@ fieldset {
   margin-bottom: 1rem;
   border: 1px solid #ffe7ae;
   padding: 1rem;
-  display: flex; /* Add display property */
-  flex-direction: column; /* Stack form elements vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 fieldset legend {
@@ -189,7 +212,7 @@ fieldset input,
 fieldset select,
 fieldset textarea {
   padding: 0.5rem;
-  width: 100%; /* Make form elements full width */
+  width: 100%;
 }
 
 fieldset input[type='checkbox'] {
@@ -202,31 +225,41 @@ form button {
   border-radius: 6px;
 }
 
-/* Additional styles to meet the new requirements */
+.boxes img {
+  height: 500px; /* Set a fixed height for the images */
+  width: auto; /* Allow the width to adjust based on the aspect ratio */
+  object-fit: cover;
+}
+
 body {
-  background-color: #fff; /* Set a background color for the body */
+  background-color: #fff;
 }
 
 nav ul li:first-child {
-  font-weight: bold; /* Make the first menu item bold */
+  font-weight: bold;
 }
 
 .popular {
-  background-color: #fff; /* Add a background color to the popular section */
+  background-color: #fff;
+  margin-top: 2rem;
 }
 
 .popular h2 {
-  margin-top: 2rem; /* Add margin-top to the popular section heading */
+  margin-top: 2rem;
 }
 
 .popular .boxes {
-  flex-direction: row; /* Display boxes horizontally in the popular section */
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .popular .box {
-  width: calc(25% - 1rem); /* Adjust box width for the popular section */
+  width: calc(50% - 1rem);
+  background-color: #ffe7ae;
+  border-radius: 10px; 
+  position: relative;
 }
 
 .popular .box p {
-  margin-top: 0.5rem; /* Add spacing between paragraphs */
+  margin-top: 0.5rem;
 }
